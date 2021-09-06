@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="login-form-container">
+        <form action="{{url_for('predictor')}}" method="POST">
+            <div class="card" style="width: 400px">
+            <div class="card-content">
+                <div class="media">
+                <div class="is-size-4 has-text-centered">Please enter your flower measurements below:</div>
+                </div>
+                <div class="content">
+
+                <div class="field">
+                    <p class="control">
+                    Sepal Length: <input class="input" type="number" step="0.1"  name="slen" id="slen">
+                    </p>
+                </div>
+
+                <div class="field">
+                    <p class="control">
+                    Sepal Width: <input class="input" type="number" step="0.1" name="swid" id="swid">
+                    </p>
+                </div>
+
+                <div class="field">
+                    <p class="control">
+                    Petal Length: <input class="input" type="number" step="0.1" name="plen" id="plen">
+                    </p>
+                </div>
+
+                <div class="field">
+                    <p class="control">
+                    Petal Width: <input class="input" type="number" step="0.1" name="pwid" id="pwid">
+                    </p>
+                </div>
+
+                <div class="field">
+                    <button class="button is-fullwidth is-rounded is-success">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+                </div>
+            </div>
+        </form>
+        <h3>Result:</h3>
+        <p>{{ slen }}</p>
+        <p>{{ swid }}</p>
+        <p>{{ plen }}</p>
+        <p>{{ pwid }}</p>
+        <p>{{ prediction }}</p>
+    </div>
+</body>
+</html>
